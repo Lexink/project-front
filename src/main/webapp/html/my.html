@@ -1,11 +1,108 @@
+<!DOCTYPE HTML>
 <html>
+<meta>
 <head>
     <title>RPG</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
     <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
     <link href="/css/my.css" rel="stylesheet">
 </head>
 <body>
-<h1>RPG admin panel</h1>
+    <h1>RPG admin panel</h1>
+    <h2>Accounts list:</h2>
+    <div name="Count option">
+        <div class="count">
+            <h3>Count per page:</h3>
+        </div>
+        <div class="count">
+            <select id="PlayersOnPage">
+                <option value="3">3</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+    </div>
+    <div name="Table">
+        <table id="players" class="table">
+            <tr>
+                <th class="table-id">#</th>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Race</th>
+                <th>Profession</th>
+                <th class="table-level">Level</th>
+                <th class="table-birthday">Birthday</th>
+                <th class="table-banned">Banned</th>
+                <th class="table-edit">Edit</th>
+                <th class="table-delete">Delete</th>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <div id="padding" class="buttons">
+        <span>Pages: </span>
+    </div>
+    <br>
+    <h2>Create new account:</h2>
+    <br>
+    <div id="createPlayer" class="fields">
+        <div id="nameField" class="field">
+            <label for="name">Name:</label>
+            <input id="name" name="name" type="text" pattern="[A-Za-z]{1,12}" required placeholder="Name of new player">
+        </div>
+        <div id="titleField" class="field">
+            <label for="title">Title:</label>
+            <input id="title" name="title" type="text" pattern="[A-Za-z]{1,30}" required placeholder="Title of new player">
+        </div>
+        <div id="raceField" class="field">
+            <label for="races">Race:</label>
+            <select id="races">
+                <option value="HUMAN">HUMAN</option>
+                <option value="DWARF">DWARF</option>
+                <option value="ELF">ELF</option>
+                <option value="GIANT">GIANT</option>
+                <option value="ORC">ORC</option>
+                <option value="TROLL">TROLL</option>
+                <option value="HOBBIT">HOBBIT</option>
+            </select>
+        </div>
+        <div id="professionField" class="field">
+            <label for="professions">Profession:</label>
+            <select id="professions">
+                <option value="WARRIOR">WARRIOR</option>
+                <option value="ROGUE">ROGUE</option>
+                <option value="SORCERER">SORCERER</option>
+                <option value="CLERIC">CLERIC</option>
+                <option value="PALADIN">PALADIN</option>
+                <option value="NAZGUL">NAZGUL</option>
+                <option value="WARLOCK">WARLOCK</option>
+                <option value="DRUID">DRUID</option>
+            </select>
+        </div>
+        <div id="levelField" class="field">
+            <label for="level">Level:</label>
+            <input id="level" type="number" min="0", max="100" value="0" required>
+        </div>
+        <div id="birthdayField" class="field">
+            <label for="birthday">Birthday:</label>
+            <input id="birthday" type="date" required>
+        </div>
+        <div id="bannedField" class="field">
+            <label for="isBanned">Banned:</label>
+            <select id="isBanned">
+                <option value=true>true</option>
+                <option value=false selected>false</option>
+            </select>
+        </div>
+        <div class="form-control">
+            <button id="saveBtn" class="buttonSave">Save</button>
+        </div>
 
+    </div>
+
+    <script src="/js/script.js"></script>
 </body>
+
 </html>

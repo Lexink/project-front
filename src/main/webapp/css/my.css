@@ -1,0 +1,163 @@
+.table {
+    width: 60%;
+    min-width: 1000px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 3px solid purple;
+}
+
+.table th {
+    border-collapse: collapse;
+    border: 1px solid purple;
+}
+
+.table td {
+    border-collapse: collapse;
+    border: 1px solid purple;
+    text-align: center;
+}
+
+.table-id{
+    width: 20px;
+}
+
+.table-level{
+    width: 40px;
+}
+
+.table-birthday{
+    width: 70px;
+}
+
+.table-banned{
+    width: 55px;
+}
+
+.table-edit{
+    width: 60px;
+}
+
+.table-delete{
+    width: 60px;
+}
+
+.count {
+    display: inline-block;
+}
+.buttons button{
+    margin: 0 5px;
+}
+.btnClass {
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    outline: none;
+    border:none;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px #ddd inset, 0 1px 1px #fff;
+}
+.btnClass:hover {
+    background: #dcdcdc linear-gradient(#fff, #dcdcdc);
+    box-shadow: 0 0 0 1px #aaa inset, 0 1px 1px #aaa;
+}
+.btnClass:active {
+    background: none;
+    box-shadow: 0 0 0 1px #bbb inset, 0 1px 3px rgba(0,0,0,.5) inset, 0 1px 2px #fff;
+}
+.selectedBtn {
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    outline: none;
+    border:none;
+    border-radius: 5px;
+    background: none;
+    box-shadow: 0 0 0 1px #bbb inset, 0 1px 3px rgba(0,0,0,.5) inset, 0 1px 2px #fff;
+}
+tr.is-edit .is-edit {
+    display: none;
+}
+
+tr.is-edit .is-delete {
+    display: none;
+}
+
+tr.is-edit .is-save {
+    display: inline-block;
+}
+
+button.is-save {
+    display: none;
+}
+
+.field {
+    clear:both;
+    line-height:25px;
+}
+
+.field input {
+    width: 14em;
+    box-sizing: border-box;
+    padding: 0 2px;
+}
+.field select {
+    width: 14em;
+}
+
+label {
+    width: 100px;
+    float:left;
+    padding-right:10px;
+}
+
+.fields {
+    float:left;
+}
+.form-control {
+    text-align: right;
+}
+
+.buttonSave {
+    display: inline-block;
+    width: 10em;
+    font-size: 80%;
+    color: rgba(255,255,255,.9);
+    text-shadow: #2e7ebd 0 1px 2px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.1;
+    white-space: pre-line;
+    padding: .7em 0;
+    border: 1px solid;
+    border-color: #60a3d8 #2970a9 #2970a9 #60a3d8;
+    border-radius: 6px;
+    outline: none;
+    background: #60a3d8 linear-gradient(#89bbe2, #60a3d8 50%, #378bce);
+    box-shadow: inset rgba(255,255,255,.5) 1px 1px;
+}
+.buttonSave:first-line{
+    font-size: 170%;
+    font-weight: 700;
+}
+.buttonSave:hover {
+    color: rgb(255,255,255);
+    background-image: linear-gradient(#9dc7e7, #74afdd 50%, #378bce);
+}
+.buttonSave:active {
+    color: rgb(255,255,255);
+    border-color: #2970a9;
+    background-image: linear-gradient(#5796c8, #6aa2ce);
+    box-shadow: none;
+}
