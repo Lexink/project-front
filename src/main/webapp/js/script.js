@@ -85,12 +85,13 @@ function upTo(el, tagName) {
 }
 
 function deleteHandler(id){
+
     $.ajax({
         url: `/rest/players/${id}`,
         type: 'DELETE',
         success: function(result) {
             let currentPage = document.querySelectorAll('.selectedBtn').item(0).id;
-            createPlayersTable(0);
+            createPlayersTable(currentPage);
             createPageButtons(currentPage);
         }
     });
@@ -222,7 +223,7 @@ function createPageButtons(currentPageNumber) {
             let btn = document.createElement("button");
             btn.textContent = i + 1;
             btn.id = i;
-            if ((i === currentPageNumber && currentPageNumber >= 0) || (i === buttonsCount-1 && currentPageNumber < 0)){
+            if ((i == currentPageNumber && currentPageNumber >= 0) || (i === buttonsCount-1 && currentPageNumber < 0)){
                 btn.className = "selectedBtn";
             } else if (i ===0  && currentPageNumber > buttonsCount-1){
                 btn.className = "selectedBtn";
